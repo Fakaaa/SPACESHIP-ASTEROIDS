@@ -1,10 +1,9 @@
 ﻿  Source.cpp
-c:\users\facundo\desktop\space ship invade\colision test\colision test\source.cpp(54): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-c:\users\facundo\desktop\space ship invade\colision test\colision test\source.cpp(229): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\facundo\desktop\space ship invade\colision test\colision test\source.cpp(230): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\facundo\desktop\space ship invade\colision test\colision test\source.cpp(245): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\facundo\desktop\space ship invade\colision test\colision test\source.cpp(248): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\facundo\desktop\space ship invade\colision test\colision test\source.cpp(249): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\facundo\desktop\space ship invade\colision test\colision test\source.cpp(264): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\facundo\desktop\space ship invade\colision test\colision test\source.cpp(265): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-  Colision TEST.vcxproj -> C:\Users\Facundo\Desktop\SPACE SHIP INVADE\COLISION TEST\Debug\Colision TEST.exe
+c:\users\administrador\desktop\clonee\spaceship-asteroids\colision test\colision test\source.cpp(54): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\administrador\desktop\clonee\spaceship-asteroids\colision test\colision test\source.cpp(230): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\administrador\desktop\clonee\spaceship-asteroids\colision test\colision test\source.cpp(231): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\administrador\desktop\clonee\spaceship-asteroids\colision test\colision test\source.cpp(249): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\administrador\desktop\clonee\spaceship-asteroids\colision test\colision test\source.cpp(250): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\administrador\desktop\clonee\spaceship-asteroids\colision test\colision test\source.cpp(265): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\administrador\desktop\clonee\spaceship-asteroids\colision test\colision test\source.cpp(266): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  Colision TEST.vcxproj -> C:\Users\Administrador\Desktop\CLONEE\SPACESHIP-ASTEROIDS\COLISION TEST\Debug\Colision TEST.exe

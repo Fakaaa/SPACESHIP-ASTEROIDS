@@ -81,10 +81,10 @@ int main(){
 		asteroidM[i].asteroid = LoadTexture("res/raw/ASTEROID.png");
 	}
 
+		int score = 0;
 
 	while (!WindowShouldClose())
 	{
-		int i = 0;
 
 		scrollingback -= 5.5f;
 		pjShip = { pj.pos.x + 45, pj.pos.y + 90 };
@@ -145,7 +145,9 @@ int main(){
 
 		DrawText("COLLISION MODE (To see colliders and real radius and positions) [F]", 550, 100, 30, GREEN);
 		DrawText("SCORE: ", 950, 20, 50, WHITE);
+		DrawText(TextFormat("%i", score), 1250, 20, 50, WHITE);
 		
+		score += 1;
 
 		detectCollision();
 		
@@ -167,8 +169,7 @@ int main(){
 		pj = playerMove(pj);
 		DrawTextureEx(pj.ship, pj.pos, inclination, 0.45f, LIGHTGRAY);
 		
-		scrollingback = scrollingback  - i;
-		i++;
+		
 		EndDrawing();
 	}
 
@@ -202,7 +203,7 @@ Player playerMove(Player player)
 	}
 	if (IsKeyDown(KEY_W))
 	{
-		player.pos.y -= 300.0f * GetFrameTime() * pj.speed;
+		player.pos.y -= 300.0f *  GetFrameTime() *pj.speed;
 		inclination -= 400.0f * GetFrameTime();
 	}
 	if (IsKeyDown(KEY_S))
@@ -242,8 +243,8 @@ Ent placeAsteroids(Ent ast)
 	float x;
 	float y;
 
-	ast.speed = rand() % 8 + 4;
-	//ast.gravityRotation = rand() % 1 + 0.1f;
+	ast.speed = rand() % 3 + 1.2f;
+	ast.gravityRotation = rand() % 8 + 4.1f;
 
 	x = rand() % 1000 + 1920;
 	y = rand() % 1070 + 10;
