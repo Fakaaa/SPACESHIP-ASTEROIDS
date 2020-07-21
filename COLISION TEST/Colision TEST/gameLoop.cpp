@@ -11,6 +11,8 @@ namespace GLoop {
 
 		while (!WindowShouldClose()){
 
+			Enemies::rotation++;
+
 			Bg::Parallax_Ini();
 
 			BeginDrawing();
@@ -40,30 +42,88 @@ namespace GLoop {
 
 	}
 	
+	void DestroyAsteroids() {
+		
+		if (CheckCollisionRecs(*Player::bullets, Enemies::colliderA)) {
+
+			Player::time = 0;
+			Player::moreScore = true;
+			Player::posScore = { Enemies::a.pos->x,Enemies::a.pos->y };
+
+			if (Enemies::a.pos) {
+				Enemies::Delete(Enemies::a.pos);
+				Enemies::aPlaced = false;
+			}
+			if (Player::bullets) {
+				Player::DeleteBullet(Player::bullets);
+				Player::bulletShoted = false;
+				Player::shoot = false;
+			}
+			Player::player.score += Player::scoreAmount;
+		}
+
+		if (CheckCollisionRecs(*Player::bullets, Enemies::colliderB)) {
+
+			Player::time = 0;
+			Player::moreScore = true;
+			Player::posScore = { Enemies::b.pos->x,Enemies::b.pos->y };
+
+			if (Enemies::b.pos) {
+				Enemies::Delete(Enemies::b.pos);
+				Enemies::bPlaced = false;
+			}
+			if (Player::bullets) {
+				Player::DeleteBullet(Player::bullets);
+				Player::bulletShoted = false;
+				Player::shoot = false;
+			}
+			Player::player.score += Player::scoreAmount;
+		}
+
+		if (CheckCollisionRecs(*Player::bullets, Enemies::colliderC)) {
+
+			Player::time = 0;
+			Player::moreScore = true;
+			Player::posScore = { Enemies::c.pos->x,Enemies::c.pos->y };
+
+			if (Enemies::c.pos) {
+				Enemies::Delete(Enemies::c.pos);
+				Enemies::cPlaced = false;
+			}
+			if (Player::bullets) {
+				Player::DeleteBullet(Player::bullets);
+				Player::bulletShoted = false;
+				Player::shoot = false;
+			}
+			Player::player.score += Player::scoreAmount;
+		}
+
+		if (CheckCollisionRecs(*Player::bullets, Enemies::colliderD)) {
+
+			Player::time = 0;
+			Player::moreScore = true;
+			Player::posScore = { Enemies::d.pos->x,Enemies::d.pos->y };
+
+			if (Enemies::d.pos) {
+				Enemies::Delete(Enemies::d.pos);
+				Enemies::dPlaced = false;
+			}
+			if (Player::bullets) {
+				Player::DeleteBullet(Player::bullets);
+				Player::bulletShoted = false;
+				Player::shoot = false;
+			}
+			Player::player.score += Player::scoreAmount;
+		}
+	}
+
 	void Check_Physichs() {
-		if (CheckCollisionRecs(Player::pjShip, Enemies::collider)) {
+		if (CheckCollisionRecs(Player::pjShip, Enemies::colliderA)) {
 			DrawText("Colision!", Screen::width / 2, Screen::heigth / 2, 20, WHITE);
 		}
 
 		if (Player::bullets) {
-
-			if (CheckCollisionRecs(*Player::bullets, Enemies::collider)) {
-
-				Player::time = 0;
-				Player::moreScore = true;
-				Player::posScore = {Enemies::a.pos->x,Enemies::a.pos->y};
-
-				if (Enemies::a.pos) {
-					Enemies::Delete(Enemies::a.pos);
-					Enemies::enemyPlaced = false;
-				}
-				if (Player::bullets) {
-					Player::DeleteBullet(Player::bullets);
-					Player::bulletShoted = false;
-					Player::shoot = false;
-				}
-				Player::player.score += Player::scoreAmount;
-			}
+			DestroyAsteroids();
 		}
 		Player::ShotMachineGun();
 	}

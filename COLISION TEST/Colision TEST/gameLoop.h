@@ -15,5 +15,6 @@ namespace GLoop {
 	extern void Main_Loop();
 	extern void Move_Enemies();
 	extern void Check_Physichs();
+	extern void DestroyAsteroids();
 }
 #endif // !GAMELOOP
